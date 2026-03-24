@@ -24,11 +24,7 @@
             $numero1 = $_POST["numero1"];
             $numero2 = $_POST["numero2"];
 
-            echo $numero1;
-            echo $numero2;
-
-
-            echo ($numero1 + $numero2);
+            $media = ($numero1 + $numero2) / 2;
         }
     ?>
 
