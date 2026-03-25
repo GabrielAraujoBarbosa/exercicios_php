@@ -9,7 +9,8 @@
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            for ($i = 1; $i <= 10; $i++) {
+
+            for ($i = 0; $i <= 5; $i++) {
                 
                 $mediaAlunos[i] = calcularMedia( ($_POST[${'aluno' . $i . '_nota1'}] ?? 0), ($_POST[${'aluno' . $i . '_nota2'}] ?? 0) );
 
@@ -120,10 +121,10 @@
             <input type="number" min="0" max="10" name="aluno6_nota2" id="aluno6_nota2" required>
             
             <br>
-            <span>Média : <?php echo $mediaAluno6 ?? ''; ?></span>
+            <span>Média : <?php echo $mediaAlunos[5] ?? ''; ?></span>
 
             <br>
-            <span>Situação : <?php echo $situacaoAlunos[2] ?? ''; ?></span>
+            <span>Situação : <?php echo $situacaoAlunos[5] ?? ''; ?></span>
         </fieldset>
 
         <button type="submit">Enviar</button>
